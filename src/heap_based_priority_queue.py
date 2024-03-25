@@ -22,12 +22,12 @@ class BinaryHeap():
         self.down(0)
         return deleted_elem
 
-    def up(self,c):
-        while c > 0:
-            father = (c - 1) // 2
-            if self.queue[c][1] > self.queue[father][1]:
-                self.queue[c], self.queue[father] = self.queue[father], self.queue[c]
-                c = father
+    def up(self, element_count):
+        while element_count > 0:
+            father = (element_count - 1) // 2
+            if self.queue[element_count][1] > self.queue[father][1]:
+                self.queue[element_count], self.queue[father] = self.queue[father], self.queue[element_count]
+                element_count = father
             else:
                 break
 
